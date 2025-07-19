@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { Home } from './home/home';\nimport { Project } from './project/project';\nexport const routes = [{\n  path: 'home',\n  component: Home\n}, {\n  path: 'project',\n  component: Project\n}, {\n  path: '',\n  redirectTo: '/home',\n  pathMatch: 'full'\n}];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
