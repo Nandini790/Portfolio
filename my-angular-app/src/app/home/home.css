@@ -1,0 +1,44 @@
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  background: var(--pastel-bg);
+  color: var(--pastel-text);
+  flex-wrap: wrap;
+
+  .hero-content {
+    max-width: 50%;
+    .highlight {
+      color: var(--pastel-primary);
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 2rem;
+      background: var(--pastel-primary);
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .hero-images {
+    width: 40%;
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+
+      .slide {
+        width: 100%;
+        border-radius: 1rem;
+        scroll-snap-align: start;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+    }
+  }
+}

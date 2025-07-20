@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import { Navbar } from "src/shared/navbar/navbar";
-import { Footer } from "src/shared/footer/footer";
-import { RouterOutlet } from "@angular/router";
+import { Home } from './home/home';
+import { Navbar } from "src/app/shared/navbar/navbar";
+import { Footer } from "src/app/shared/footer/footer";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [Navbar, Footer, RouterOutlet],
-  // styleUrls: ['./app.component.css']
+  imports: [Navbar, Footer, RouterOutlet ],
+  styleUrl: './app.component.css',
+  standalone: true
 })
 export class AppComponent {
-  title = 'my-angular-app';
+  title = 'Nandini Portfolio';
 
   constructor() {
     this.initializeApp();

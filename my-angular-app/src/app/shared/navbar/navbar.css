@@ -1,53 +1,23 @@
-/* Modern Minimal Navbar Styles */
-
-.modern-navbar {
-  background-color: #ffffff;
+.navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  justify-content: center;
+  background: var(--pastel-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.navbar-left {
+.navbar ul {
   display: flex;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
 }
-
-.round-logo {
-  height: 36px;
-  width: 36px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 12px;
+.navbar li {
+  margin: 0 1rem;
 }
-
-.brand-name {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #202020;
-}
-
-.navbar-links a {
-  color: #5a3f83;
+.navbar a {
   text-decoration: none;
-  font-weight: 500;
-  margin-left: 1.5rem;
-  padding: 6px 0;
-  font-size: 0.95rem;
-  transition: color 0.2s ease, border-bottom 0.2s ease;
+  font-weight: 600;
+  color: var(--pastel-text);
 }
-
-.navbar-links a:hover {
-  color: #7a5fa3;
+.navbar a.active {
+  color: var(--pastel-primary);
 }
-
-.active-link {
-  color: #7a5fa3;
-  border-bottom: 2px solid #7a5fa3;
-}
-
