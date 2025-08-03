@@ -1,8 +1,32 @@
-
-:root {
-  --pastel-bg: #fdf6f0;
-  --pastel-primary: #a2c4c9;
-  --pastel-secondary: #d3bcc0;
-  --pastel-accent: #f7d9c4;
-  --pastel-text: #5f6368;
+/* General Styles
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
 }
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+} */
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('assets/images/bg.jpg'); /* ✅ Path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4 { margin: 0; }
+a { text-decoration: none; color: inherit; }
