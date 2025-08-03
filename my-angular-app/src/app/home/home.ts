@@ -1,4 +1,4 @@
-import { Component, ElementRef , ViewChild } from '@angular/core';
+import { Component, ElementRef , ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { trigger, style, animate, transition } from '@angular/animations';
@@ -13,9 +13,38 @@ import emailjs from '@emailjs/browser';
   standalone: true,
 })
 
-export class Home {
+export class Home implements AfterViewInit {
 
   @ViewChild('contactForm') contactForm!: ElementRef<HTMLFormElement>;
+
+  ngAfterViewInit(): void {
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.next') as HTMLElement;
+  const prevBtn = document.querySelector('.prev') as HTMLElement;
+  let currentSlide = 0;
+
+  function showSlide(index: number) {
+    slides.forEach((slide, i) => {
+      (slide as HTMLElement).classList.toggle('active', i === index);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+  }
+
+  showSlide(currentSlide);
+}
 
   sendEmail() {
     emailjs.sendForm(

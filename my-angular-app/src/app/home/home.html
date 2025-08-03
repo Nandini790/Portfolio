@@ -9,10 +9,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
        <div class="nav-actions">
-      <button class="btn-primary">Download CV</button>
-      <div class="hero-profile">
-        <img src="your-profile.jpg" alt="Profile" />
-      </div>
+      <a href="assets/NandiniSResume.pdf" class="btn-primary" download>Download CV</a>
     </div>
   </nav>
     <div class="text">
@@ -26,22 +23,54 @@
   <section class="services" id="services">
     <h3 class="subtitle">What I DO</h3>
     <div class="service-cards">
-      <a href="#frontend" class="card-link">
-        <div class="service-card">
-          <h3>UI/UX Design</h3>
-          <p>Designing beautiful, user-first interfaces with Figma & Adobe XD.</p>
-        </div>
-      </a>
       <a href="#fullstack" class="card-link">
         <div class="service-card">
-          <h3>Full Stack Development</h3>
-          <p>Robust APIs & interactive frontends using .NET, Angular & SQL.</p>
+        <h4>Full Stack Development</h4>
+        <ul>
+        <li>Angular + .NET Core web apps</li>
+        <li>Responsive UI/UX implementation</li>
+        <li>API & database integration</li>
+      </ul>
+        </div>
+      </a>
+      <a href="#azureCloudServices" class="card-link">
+        <div class="service-card">
+           <h4>Azure Cloud Services</h4>
+      <ul>
+        <li>Azure App Service deployment</li>
+        <li>Azure SQL & Blob Storage</li>
+        <li>Azure DevOps CI/CD setup</li>
+      </ul>
+        </div>
+      </a>
+      <a href="#restapidevelopment" class="card-link">
+        <div class="service-card">
+          <h4>REST API Development</h4>
+          <ul>
+        <li>Secure .NET Web APIs</li>
+        <li>JWT authentication</li>
+        <li>Postman & Swagger documentation</li>
+      </ul>
         </div>
       </a>
       <a href="#microservices" class="card-link">
         <div class="service-card">
-          <h3>Microservices & DevOps</h3>
-          <p>Containerized services, CI/CD & scalable deployments with Docker, Azure.</p>
+          <h4>Microservices</h4>
+      <ul>
+        <li>.NET microservices design</li>
+        <li>Modular and scalable codebase</li>
+        <li>Containerization-ready services</li>
+      </ul>
+        </div>
+      </a>
+      <a href="#bugfixes" class="card-link">
+        <div class="service-card">
+          <h4>Bug Fixes & Maintenance</h4>
+      <ul>
+        <li>UI bug resolution</li>
+        <li>API/logic debugging</li>
+        <li>Performance tuning</li>
+      </ul>
         </div>
       </a>
     </div>
@@ -49,59 +78,71 @@
 
  <section class="about-section" id="about">
   <div class="about-container">
-    <div class="about-image">
-      <img src="your-profile.png" alt="Nandini" />
-    </div>
-    <div class="about-content">
+
+    <!-- Left Side: Text + CV Button -->
+    <div class="about-left">
       <h3 class="subtitle">ABOUT ME</h3>
-      <h2 class="about-title">Designing Solutions, Not Just Visuals</h2>
       <p class="about-desc">
-        Lorem ipsum dolor sit amet consectetur. Dignissim sed tristique arcu
-        ipsum quis. Malesuada vestibulum nibh diam congue duis.
+        I'm Nandini, a passionate Full Stack Developer with 3+ years of experience building scalable web applications. 
+        I specialize in Angular, .NET Core, and RESTful APIs, with a strong grip on debugging, backend maintenance, and 
+        enterprise-grade codebases. I’ve worked on real-time systems at TCS, contributing to production stability, feature
+        enhancements, and system optimization. With a commitment to clean code and performance,
+        I aim to deliver impactful digital solutions — not just functional, but elegant.
       </p>
-      <div class="about-cards">
-        <div class="about-card card-orange">
-          <strong>5k+ Complete Project</strong>
-          <p>Dolor sit amet consectetur. Dignissim sed tristique arcu ipsum quis.</p>
-        </div>
-        <div class="about-card card-purple">
-          <strong>8+ Years of Experience</strong>
-          <p>Lorem ipsum dolor sit amet consectetur. Dignissim sed tristique arcu.</p>
-        </div>
-      </div>
-      <button class="btn-primary-cv">Download CV</button>
+      <a href="assets/NandiniSResume.pdf" class="btn-primary-cv" download>Download CV</a>
     </div>
+
+    <!-- Right Side: Cards -->
+    <div class="about-right about-cards">
+      <div class="about-card card-orange">
+        <strong>Real-World Experience</strong>
+        <p>Worked on 2 production-grade projects involving bug fixes, maintenance, and backend improvements — ensuring smooth performance and system stability.</p>
+      </div>
+      <div class="about-card card-purple">
+        <strong>3+ Years in Full Stack Development</strong>
+        <p>Skilled in Angular, .NET, API handling, and maintaining large codebases in enterprise settings.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-  <section class="process" id="projects">
-    <h3 class="subtitle">My Workflow</h3>
-    <div class="process-steps">
-      <div class="process-card">
-        <h4>Understand & Plan</h4>
-        <p>Identify core problems and build strong foundations before writing code.</p>
-      </div>
-      <div class="process-card">
-        <h4>Design & Build</h4>
-        <p>Create pixel-perfect UI and efficient backend logic with agile iterations.</p>
-      </div>
-      <div class="process-card">
-        <h4>Test & Launch</h4>
-        <p>Ensure reliability through testing and continuous delivery pipelines.</p>
-      </div>
+<section class="process" id="projects">
+  <h3 class="subtitle">Projects</h3>
+  <div class="slider">
+    <div class="slide active">
+      <img src="assets/images/food-img.jpg" alt="Project 1" />
+      <p>A responsive e-commerce website with integrated payment gateway and modern UI.
+        <br />Built using Angular and .NET, featuring dynamic product listings and user authentication.
+        <br />Focus on performance optimization and responsive design.</p>
     </div>
-  </section>
+    <div class="slide">
+      <img src="assets/images/portfolio-img.jpg" alt="Project 2" />
+       <p>Portfolio web app built using Angular and Firebase with smooth animations and dynamic content.
+        <br />Features include real-time updates and a user-friendly interface.Focus on performance optimization and responsive design.</p>
+    </div>
+    <div class="slide">
+      <img src="assets/images/weather-img.png" alt="Project 3" />
+        <p>Real-time weather dashboard using OpenWeather API with custom location search.
+        <br />Utilizes Angular for the frontend and .NET for the backend.Features responsive design and interactive charts.</p>
+    </div>
+  </div>
+  <div class="slider-nav">
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+  </div>
+</section>
 
   <section id="contact" class="contact-section">
   <div class="contact-container">
-    <h4 class="contact-subtitle">We’d love to hear from you</h4>
-    <h2 class="contact-title">Contact Us</h2>
-    <p class="contact-text">Have questions or feedback? Reach out and we’ll get back to you!</p>
+    <h4 class="contact-subtitle">I’d love to hear from you</h4>
+    <h2 class="subtitle">Let's Connect</h2>
+    <p class="contact-text">Have questions or feedback? Reach out and I’ll get back to you!</p>
 
     <div class="contact-boxes">
       <div class="contact-info">
         <div class="email-icon">📧</div>
-        <p>You can also email us:</p>
+        <p>You can also email on:</p>
         <a href="mailto:nandinisingh.creator&#64;gmail.com">nandinisingh.creator&#64;gmail.com</a>
       </div>
 

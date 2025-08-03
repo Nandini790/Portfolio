@@ -6,7 +6,7 @@ html{
 body {
   margin: 0;
   padding: 0;
-  font-family: 'pacifico', cursive;
+  font-family: 'inter';
   background-image: url('assets/images/bg.png'); /* ✅ Path to your image */
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,10 @@ section{
   margin: 0;
   padding: 0;
   width: 100%;
+  border: 6px solid #e0e0e0;
+  padding: 40px 20px;
+  border-radius: 20px;
 }
 
 h1, h2, h3, h4 { margin: 0; }
-a { text-decoration: wavy; color: inherit; }
+a { text-decoration: wavy; color: white; }
