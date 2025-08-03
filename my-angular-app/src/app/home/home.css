@@ -1,24 +1,12 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #333;
-}
-
-h1, h2, h3, h4 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+/* Home Page Styles */
 /* Hero Section with Navbar */
 .hero {
-  background: linear-gradient(to right, #ff5f6d, #ffc371); /* Bright pink-orange gradient */
-  color: #fff;
+  /* background-image: url('assets/images/bg.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  background: linear-gradient(to right, #f857a6, #ffcc70);
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -32,9 +20,11 @@ a {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 900;
   color: white;
+  font-family: Dancing Script, cursive;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -77,20 +67,19 @@ a {
 
 .hero-text {
   max-width: 50%;
+
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  font-weight: 500;
+  font-family: Dancing Script, cursive;
+  letter-spacing: 1px;
+  color: white;
 }
 
 .hero h1 span {
   color: #fff176; /* Bright yellow */
-}
-
-.hero p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #fdfdfd;
 }
 
 .cta-buttons {
@@ -110,7 +99,7 @@ a {
 .services {
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(to right, #ff5f6d, #ffc371); 
+  /* background: linear-gradient(to right, #f857a6, #ffcc70); */ 
 }
 
 .service-cards {
@@ -156,7 +145,7 @@ a {
 
 .about-section {
   padding: 4rem 2rem;
-  background: linear-gradient(to right, #ff5f6d, #ffc371); 
+  /* background: linear-gradient(to right, #f857a6, #ffcc70); */
   text-align: center;
 }
 
@@ -228,7 +217,7 @@ a {
 /* Process Section */
 
 .process {
-  background: linear-gradient(to right, #ff5f6d, #ffc371); 
+  /* background: linear-gradient(to right, #f857a6, #ffcc70); */
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -336,13 +325,16 @@ a {
 .contact-section {
   padding: 4rem 2rem;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #f857a6, #ffcc70);
+  /* background: linear-gradient(to right, #f857a6, #ffcc70); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: #fff;
   text-align: center;
 }
 
 .contact-container {
-  max-width: 960px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -375,7 +367,7 @@ a {
   color: #333;
   padding: 1.5rem;
   border-radius: 12px;
-  width: 280px;
+  width: 320px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
