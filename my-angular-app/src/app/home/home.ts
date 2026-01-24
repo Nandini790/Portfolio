@@ -1,13 +1,15 @@
 import { Component, ElementRef , ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { trigger, style, animate, transition } from '@angular/animations';
-import emailjs from '@emailjs/browser';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
   standalone: true,
@@ -15,7 +17,17 @@ import emailjs from '@emailjs/browser';
 
 export class Home implements AfterViewInit {
 
-  @ViewChild('contactForm') contactForm!: ElementRef<HTMLFormElement>;
+  contactForm: FormGroup;
+  isSubmitted = false;
+  responseMessage = '';
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+    });
+  }
 
   ngAfterViewInit(): void {
   const slides = document.querySelectorAll('.slide');
@@ -46,17 +58,31 @@ export class Home implements AfterViewInit {
   showSlide(currentSlide);
 }
 
-  sendEmail() {
-    emailjs.sendForm(
-      'YOUR_SERVICE_ID',        // Replace with your actual service ID
-      'YOUR_TEMPLATE_ID',       // Replace with your EmailJS template ID
-      this.contactForm.nativeElement,
-      'YOUR_PUBLIC_USER_ID'     // Your public user ID from EmailJS
-    ).then(() => {
-      alert('Message sent successfully!');
-      this.contactForm.nativeElement.reset();
-    }).catch((error) => {
-      console.error('Email send failed:', error);
-    });
-  }
+  onSubmit() {
+    console.log('Form submitted start');
+    if (this.contactForm.valid) {
+      this.http.post('http://localhost:5000/api/contact/send', this.contactForm.value)
+        .subscribe({
+          next: (res: any) => {
+            this.responseMessage = res.message;
+            this.isSubmitted = true;
+            this.contactForm.markAsPristine();
+            this.contactForm.markAsUntouched();
+            this.contactForm.reset();
+            setTimeout(() => {
+          this.responseMessage = '';
+        }, 5000);
+          },
+          error: (err) => {
+            console.error('Error sending message:', err);
+            this.responseMessage = 'Something went wrong!';
+            this.contactForm.reset();
+            setTimeout(() => {
+          this.responseMessage = '';
+        }, 5000);
+          }
+        });
+        console.log('Form submitted end');
+    }
+}
 }
