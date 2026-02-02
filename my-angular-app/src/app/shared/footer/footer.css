@@ -1,12 +1,11 @@
-/* Footer */
+/* Footer - professional */
 footer {
-  background: linear-gradient(to right, #ff5f6d, #ffc371);
-  color: white;
+  background: linear-gradient(90deg, var(--accent), var(--accent-600));
+  color: #ffffff;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
-footer a {
-  color: #fff9c4;
-  margin: 0 0.5rem;
-}
+footer .container { display: flex; align-items: center; justify-content: center; gap: 1rem; max-width: var(--container-width); margin: 0 auto; }
+
+footer p { margin: 0; color: rgba(255,255,255,0.9); }
